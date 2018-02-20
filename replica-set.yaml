@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta2            
+kind: ReplicaSet                    
+metadata:
+  name: kubia-go
+spec:
+  replicas: 3
+  selector:
+    matchLabels:                    
+      app: kubia-go                    
+  template:                         
+    metadata:                       
+      labels:                      
+        app: kubia-go                  
+    spec:                         
+      containers:                  
+      - name: kubia-go                 
+        image: tyndyll/kubia-go

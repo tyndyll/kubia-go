@@ -1,0 +1,14 @@
+apiVersion: v1              
+kind: Pod                   
+metadata:
+  name: kubia-manual
+  labels:
+    env: prod
+    rel: 20180220T100713        
+spec:
+  containers:
+  - image: tyndyll/kubia-go      
+    name: kubia             
+    ports:
+    - containerPort: 8080    
+      protocol: TCP
